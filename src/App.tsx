@@ -1,10 +1,9 @@
 import { useEffect, useState } from "react";
-import reactLogo from "./assets/react.svg";
 import "./App.css";
 
 function App() {
-  const [count, setCount] = useState(0);
-  const [start, setStart] = useState(false);
+  const [count, setCount] = useState<number>(0);
+  const [start, setStart] = useState<boolean>(false);
 
   useEffect(() => {
     if (start) {
@@ -19,6 +18,7 @@ function App() {
 
   return (
     <>
+      <p className="count">Counter </p>
       <p className="count">{count}</p>
       <button
         onClick={() => {
